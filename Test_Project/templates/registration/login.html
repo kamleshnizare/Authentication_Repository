@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{%extends 'registration/home.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block baseblock%}
+<h1>Login Form</h1>
+<form method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" name="" value = "submit">
+</form>
+{% endblock%}
+</body>
+</html>

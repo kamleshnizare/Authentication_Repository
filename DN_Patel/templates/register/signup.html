@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% extends 'home/home.html'%}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block baseblock%}
+<div class = "" align="center">
+    <form method="post">
+    {%csrf_token%}
+        <table>
+    <tr>
+    <th><label for="id_first_name"><font color="#FFA07A">First name&nbsp;&nbsp;&nbsp;</font></label></th>
+    <td>
+     &ensp;&ensp;
+      <input class="form-control me-2" placeholder="Enter First Name" type="text" name="first_name" maxlength="150" id="id_first_name">
+
+      <br>
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_last_name"><font color="#FFA07A">Last name</font></label></th>
+    <td>
+      &ensp;&ensp;
+      <input class="form-control me-2" placeholder="Enter Last Name" type="text" name="last_name" maxlength="150" id="id_last_name">
+
+    <br>
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_email"><font color="#FFA07A">Email ID</font></label></th>
+    <td>
+      &ensp;&ensp;
+      <input class="form-control me-2" placeholder="Enter Email Address" type="email" name="email" maxlength="254" id="id_email">
+      <br>
+
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_username"><font color="#FFA07A">Username</font></label></th>
+    <td>
+       &ensp;&ensp;
+      <input class="form-control me-2" placeholder="Enter Username"  type="text" name="username" maxlength="150" required id="id_username">
+
+        <br>
+
+    </td>
+  </tr>
+
+  <tr>
+      <th><label for="id_password"><font color="#FFA07A">Password</font></label></th>
+    <td>
+     &ensp;&ensp;
+      <input class="form-control me-2 " placeholder="Enter Password" type="password" name="password" maxlength="128" required id="id_password">
+
+
+     <br>
+
+    </td>
+  </tr>
+            </table>
+        &ensp;&ensp;
+        <button class="button button1 bg-primary" type="submit">Submit</button>&ensp;
+    </form>
+</div>
+
+{% endblock %}
+</body>
+</html>
